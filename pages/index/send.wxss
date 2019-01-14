@@ -1,0 +1,25 @@
+textarea {
+  width: 100%;
+}
+
+.textarea-wrp {
+  padding: 0 25rpx;
+  background-color: #fff;
+}
+
+.form-list{
+    width:100%;
+    padding: 5px;
+    margin-bottom: 30px;
+}
+.form-list-left{
+    width:15%;
+    float: left;
+    vertical-align:middle;
+
+}
+.form-list-right{
+    width:80%;
+    float: right;
+}
+

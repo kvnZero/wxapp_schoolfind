@@ -1,0 +1,31 @@
+<import src="../public/item.wxml"/>
+<include src="../public/header.wxml"/>
+ <view class="row-container">
+    <view class="header">
+      <view class="left">
+        <text>轮播提醒</text>
+      </view>
+    </view>
+    <view class="slider-wrapper">
+    <swiper autoplay='true' indicator-dots="true"
+    interval="3000" duration="500">
+    <block wx:for="{{imgUrls}}" wx:key="*this">
+        <swiper-item>
+        <image src="{{item}}" class="slide-image"/>
+        </swiper-item>
+    </block>
+    </swiper>
+    </view>
+  </view>
+ <view class="row-container">
+    <view class="header">
+      <view class="left">
+        <text>最新发布</text>
+      </view>
+    </view>
+    <view class="content-wrapper">
+    <block wx:for="{{hotList}}" wx:key="avid">
+            <template is="a-text" data="{{...item}}"/>
+    </block>
+    </view>
+  </view>

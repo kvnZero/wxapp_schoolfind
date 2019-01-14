@@ -1,0 +1,35 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/index/user",
+    "pages/index/write"
+    ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#00B26A",
+    "navigationBarTitleText": "广轻寻物",
+    "navigationBarTextStyle":"white",
+    "onReachBottomDistance": 50
+  },
+  "tabBar":{
+      "color": "#000",
+      "selectedColor": "#008000",
+      "backgroundColor": "#F5F5F5",
+      "list":[{
+            "pagePath":"pages/index/index",
+            "text":"寻物",
+            "iconPath":"images/house.png",
+            "selectedIconPath":"images/s_house.png"
+          },{
+            "pagePath": "pages/index/write",
+            "text": "发布",
+            "iconPath": "images/pencil.png",
+            "selectedIconPath": "images/s_pencil.png"
+        },{
+            "pagePath":"pages/index/user",
+            "text":"我的",
+            "iconPath": "images/user.png",
+            "selectedIconPath": "images/s_user.png"
+          }]
+  }
+}

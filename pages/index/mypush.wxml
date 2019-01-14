@@ -1,0 +1,14 @@
+<!--pages/index/mypush.wxml-->
+<import src="../public/item.wxml"/>
+<view class="row-container">
+    <view class="header">
+      <view class="left">
+        <text>我的发布(双击删除,长按更新时间)</text>
+      </view>
+    </view>
+    <view class="content-wrapper">
+    <block wx:for="{{hotList}}" wx:key="avid">
+            <template is="m-text" data="{{...item}}"/>
+    </block>
+    </view>
+  </view>

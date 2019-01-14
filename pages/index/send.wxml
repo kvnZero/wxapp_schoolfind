@@ -1,0 +1,21 @@
+<view class="row-container">
+<form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="header">
+      <view class="left">
+        <text>发送邮件:{{username}}</text>
+      </view>
+    </view>
+    <view class="content-wrapper">
+        <view class="form-list" style='height:8em'>
+        <view class="form-list-left">内容</view>
+        <view class="form-list-right">
+        <textarea placeholder='请输入相关内容,如丢失物品特征等(必填)' maxlength="240" style='height:10em' name="text"/>
+        </view>
+        </view>
+
+    <view style='border-top:1px #ccc solid'></view>
+        <button class="weui-btn" type="primary" form-type="submit" style='margin-top:10px;'>发送</button>
+    
+    </view>
+    </form>
+  </view>

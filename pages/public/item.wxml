@@ -1,0 +1,81 @@
+<template name="a-text">
+    <view class="content-list">
+    <view class="item">
+            <view class='content-left'>
+                    <navigator hover-class="none" url="/pages/index/send?sendto={{uid}}&name={{username}}">
+                <image class="avatar-img"
+                mode="scaleToFill"
+                src="{{useraurl}}">
+                </image>
+                </navigator>
+            </view>
+
+            <view class='content-right'>
+                <view class="text-name">{{username}}<label class="up-time">{{time}}</label></view>
+                
+            <view class="content">
+                <view class="text-body"><block wx:if="{{ctype==1}}">[寻物]</block><block wx:else>[寻主]</block>{{ctext}}</view>
+            </view>
+            <block wx:for="{{images}}" wx:key="imageid">
+                <image class="show-img"
+                mode="scaleToFill"
+                bindtap="imgWatch"
+                data-src="{{item}}"
+                src="{{item}}">
+                </image>
+            </block>
+            <view class="address">
+            <image
+         class="place-image"
+          mode="scaleToFill"
+          src="/images/place.png"></image>
+                <view class="address-text">
+                    {{caddress}}
+                </view>
+            </view>
+             <block wx:if="{{cphone}}">
+            <view class="tel">
+                <image
+         class="place-image"
+          mode="scaleToFill"
+          src="/images/tel.png"></image>
+                <view class="address-text">
+                    {{cphone}}
+                </view>
+            </view>
+            </block>
+            </view>
+
+        </view>
+    </view>
+    <view style='border-top:1px #ccc solid'></view>
+</template>
+
+<template name="m-text">
+    <view class="content-list">
+        <view class="item" hover-class="none" bindlongpress="longpress" bindtap="doubleTap" bindtouchstart="touchStart" bindtouchend="touchEnd" data-id="{{cid}}">
+            <view class="content">
+                <view class="text-body">
+                    <block wx:if="{{ctype==1}}">[寻物]</block><block wx:else>[寻主]</block>{{ctext}}
+                </view>
+            </view>
+        </view>
+    </view>
+    <view style='border-top:1px #ccc solid'></view>
+</template>
+
+<template name="m-email">
+    <view class="content-list">
+        <view class="item" hover-class="none" bindlongpress="longpress" bindtap="doubleTap" bindtouchstart="touchStart" bindtouchend="touchEnd" data-id="{{cid}}" data-fromid="{{email_from}}">
+            <view class="content">
+                <view class="text-body">
+                    {{email_text}}
+                </view>
+                <view style="color:#ccc;font-size:14px;">
+                {{email_time}}
+                </view>
+            </view>
+        </view>
+    </view>
+    <view style='border-top:1px #ccc solid'></view>
+</template>

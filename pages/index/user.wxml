@@ -1,0 +1,41 @@
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" style='margin-bottom:10px;'>一键登录</button>
+    <block wx:else>
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+</view>
+<block wx:if="{{!hasUserInfo && canIUse}}" >
+<view style='text-align:center'>首次使用,需要授权用户</view>
+</block>
+<block wx:else>
+<view class="list">
+    <view class="work">
+        <navigator class="push" hover-class="none" url="/pages/index/mypush">
+            <view class="push-number">
+                {{countpush}}
+            </view>
+            <view class='push-content'>
+                已发布
+            </view>
+        </navigator>
+        <navigator class="message" hover-class="none" url="/pages/index/email">
+            <view class="message-number">
+                {{countemail}}
+            </view>
+            <view class='message-content'>
+                收件箱
+            </view>
+        </navigator>
+    </view>
+</view>
+<view class="h-list">
+    <navigator class="cwechat" hover-class="none" url="/pages/index/card">
+        <view class="h-list-text">
+            绑定校园卡号
+        </view>
+    </navigator>
+</view>
+</block>

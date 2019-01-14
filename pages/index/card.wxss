@@ -1,0 +1,17 @@
+/* pages/index/card.wxss */
+.form-list{
+    width:100%;
+    padding-top:5px;
+    margin-bottom: 30px;
+}
+.form-list-left{
+    width:15%;
+    padding-left:5px;
+    float: left;
+    vertical-align:middle;
+
+}
+.form-list-right{
+    width:80%;
+    float: right;
+}

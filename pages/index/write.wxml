@@ -1,0 +1,64 @@
+<view class="row-container">
+<form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="header">
+      <view class="left">
+        <text>发布需求</text>
+      </view>
+    </view>
+    <view class="content-wrapper">
+        <view class="form-list">
+        <view class="form-list-left">类型</view>
+        <view class="form-list-right">
+        <radio-group name="type">
+            <label>
+            <radio value="1" checked="true" />
+            物品丢失
+            </label>
+            <label>
+            <radio value="2" name="type"/>
+            物品招领
+            </label>
+        </radio-group>
+        </view>
+        </view>
+    <view style='border-top:1px #ccc solid'></view>
+
+        <view class="form-list" style='height:2em'>
+        <view class="form-list-left">内容</view>
+        <view class="form-list-right">
+        <textarea placeholder='请输入相关内容,如丢失物品特征等(必填)' maxlength="180" style='height:3em' name="text"/>
+        </view>
+        </view>
+
+    <view style='border-top:1px #ccc solid'></view>
+        
+        <view class="form-list">
+        <view class="form-list-left">地点</view>
+        <view class="form-list-right">
+        <input type='text' placeholder="丢失/捡到的地点(必填)" maxlength="20" name="address"/>
+        </view>
+        </view>
+
+    <view style='border-top:1px #ccc solid'></view>
+        
+        <view class="form-list">
+        <view class="form-list-left">联系</view>
+        <view class="form-list-right">
+        <input type='text' placeholder="输入联系方式(选填)" maxlength="20" name="phone"/>
+        </view>
+        </view>
+    <view style='border-top:1px #ccc solid'></view>
+        <label style="font-size:12px;color:#999;">物品是校园卡建议填写,如果有记录则会自动发送到收件箱</label>
+        <view class="form-list">
+        <view class="form-list-left">卡号</view>
+        <view class="form-list-right">
+        <input type='text' placeholder="6位校园卡号(选填)" maxlength="6" name="cardid"/>
+        </view>
+        </view>
+      <view style='border-top:1px #ccc solid'></view>
+
+        <button class="weui-btn" type="primary" form-type="submit" style='margin-top:10px;'>提交</button>
+    
+    </view>
+    </form>
+  </view>

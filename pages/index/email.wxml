@@ -1,0 +1,14 @@
+<!--pages/index/mypush.wxml-->
+<import src="../public/item.wxml"/>
+<view class="row-container">
+    <view class="header">
+      <view class="left">
+        <text>我的收信(双击删除,长按回复)</text>
+      </view>
+    </view>
+    <view class="content-wrapper">
+    <block wx:for="{{hotList}}" wx:key="avid">
+            <template is="m-email" data="{{...item}}"/>
+    </block>
+    </view>
+  </view>
