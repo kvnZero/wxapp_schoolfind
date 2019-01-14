@@ -10,18 +10,6 @@ App({
                       if (res.data.openid) {
                           var app = getApp();
                           app.globalData.openid = res.data.openid;
-                          console.log("已经登录:" + res.data.openid);
-                      } else {
-                          wx.showModal({
-                              title: '提示',
-                              content: '登录失败,请检查网络状态？',
-                              showCancel: false,
-                              success: function (res) {
-                                  wx.navigateBack({
-                                      delta: 1
-                                  })
-                              }
-                          })
                       }
                   },
                   fail: function () {
@@ -37,14 +25,9 @@ App({
                       })
                   }
               })
-          } else {
-              console.log('登录失败！' + res.errMsg)
           }
-          
-          
       }
     })
-    // 获取用户信息
     wx.getSetting({
       success: res => {
         if (res.authSetting['scope.userInfo']) {
@@ -56,10 +39,6 @@ App({
               }
             }
           })
-        }else{
-            wx.reLaunch({
-                url: "/pages/index/user"
-            })
         }
       }
     })
